@@ -1,0 +1,123 @@
+ <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Mi Blog</title>\
+    <style>\
+        body \{\
+            font-family: Arial, sans-serif;\
+            margin: 0;\
+            padding: 0;\
+            background-color: #f4f4f4;\
+        \}\
+\
+        header \{\
+            background-color: #333;\
+            color: #fff;\
+            padding: 10px 0;\
+            text-align: center;\
+        \}\
+\
+        header h1 \{\
+            margin: 0;\
+        \}\
+\
+        nav ul \{\
+            list-style: none;\
+            padding: 0;\
+        \}\
+\
+        nav ul li \{\
+            display: inline;\
+            margin: 0 10px;\
+        \}\
+\
+        nav ul li a \{\
+            color: #fff;\
+            text-decoration: none;\
+        \}\
+\
+        main \{\
+            padding: 20px;\
+            max-width: 800px;\
+            margin: 20px auto;\
+            background-color: #fff;\
+            border-radius: 8px;\
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\
+        \}\
+\
+        article \{\
+            margin-bottom: 20px;\
+        \}\
+\
+        article h2 \{\
+            margin-top: 0;\
+        \}\
+\
+        footer \{\
+            text-align: center;\
+            padding: 10px 0;\
+            background-color: #333;\
+            color: #fff;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <header>\
+        <h1>Mi Blog</h1>\
+        <nav>\
+            <ul>\
+                <li><a href="#home">Inicio</a></li>\
+                <li><a href="#about">Acerca de</a></li>\
+                <li><a href="#contact">Contacto</a></li>\
+            </ul>\
+        </nav>\
+    </header>\
+\
+    <main id="content">\
+        <!-- Los art\'edculos del blog se cargar\'e1n aqu\'ed -->\
+    </main>\
+\
+    <footer>\
+        <p>&copy; 2024 Mi Blog. Todos los derechos reservados.</p>\
+    </footer>\
+\
+    <script>\
+        document.addEventListener("DOMContentLoaded", function() \{\
+            const blogContent = [\
+                \{\
+                    "title": "Primer Art\'edculo",\
+                    "date": "2024-07-09",\
+                    "content": "Este es el contenido de mi primer art\'edculo. \'a1Bienvenido a mi blog!"\
+                \},\
+                \{\
+                    "title": "Segundo Art\'edculo",\
+                    "date": "2024-07-10",\
+                    "content": "Aqu\'ed est\'e1 el contenido de mi segundo art\'edculo. \'a1Gracias por leer!"\
+                \}\
+            ];\
+\
+            const mainContent = document.getElementById("content");\
+\
+            blogContent.forEach(article => \{\
+                const articleElement = document.createElement("article");\
+                const titleElement = document.createElement("h2");\
+                const dateElement = document.createElement("p");\
+                const contentElement = document.createElement("p");\
+\
+                titleElement.textContent = article.title;\
+                dateElement.textContent = article.date;\
+                contentElement.textContent = article.content;\
+\
+                articleElement.appendChild(titleElement);\
+                articleElement.appendChild(dateElement);\
+                articleElement.appendChild(contentElement);\
+\
+                mainContent.appendChild(articleElement);\
+            \});\
+        \});\
+    </script>\
+</body>\
+</html>\
+}
